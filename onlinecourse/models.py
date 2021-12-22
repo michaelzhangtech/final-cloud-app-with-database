@@ -125,6 +125,7 @@ class Question(models.Model):
     # Other fields and methods you would like to design
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    seqNo = models.IntegerField(default=0)
     content = ''
     result = models.BooleanField()
 # <HINT> The submission model
